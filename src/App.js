@@ -75,7 +75,7 @@ const sections = [
     isFinal: true,
     buttons: [
       { label: "Email Me", link: "mailto:hiptlinj13@gmail.com" },
-      { label: "veiw Resume", link: "/resume.pdf", download: true },
+      { label: "veiw Resume", link: "/hipt_resume.pdf", download: true },
       { label: "LinkedIn", link: "https://www.linkedin.com/in/jose-hiptlin-628904268/" },
     ],
   },
