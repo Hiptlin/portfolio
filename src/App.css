@@ -1,0 +1,240 @@
+/* Basic styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Section layout */
+.split-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding: 60px 10%;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-in-out;
+}
+
+.split-section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.split-content {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+
+.split-image {
+  flex: 1 1 400px;
+  text-align: center;
+  position: relative;
+}
+
+.split-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Floating card */
+.floating-card {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 280px;
+  perspective: 1000px;
+  animation: float 4s ease-in-out infinite;
+  z-index: 1;
+  display: block;
+}
+
+.floating-card img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transform: rotateY(8deg);
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-50%) translateY(0);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-15px);
+  }
+}
+
+/* Theming */
+.theme-light { background: #dabebe; }
+.theme-blue { background: #e0f0ff; }
+.theme-green { background: #e3f9e5; }
+.theme-orange { background: #fff4e1; }
+.theme-purple { background: #f3e8ff; }
+.theme-grey { background: #f0f0f0; }
+.theme-dark { background: #1e1e1e; color: #f8f8f8; }
+
+.theme-dark .button {
+  background: #fff;
+  color: #1e1e1e;
+}
+.theme-dark .button:hover {
+  background: #ddd;
+}
+
+/* Tags and buttons */
+.tags {
+  margin: 20px 0;
+}
+.tag {
+  display: inline-block;
+  background: #ddd;
+  color: #444;
+  padding: 5px 10px;
+  margin: 0 8px 8px 0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.button, .button-group .button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #333;
+  color: #f8f8f2;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.button:hover {
+  background: #555;
+}
+
+/* Sticky Header/Footer */
+.sticky-header, .sticky-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  font-weight: bold;
+}
+
+.sticky-header {
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.sticky-footer {
+  bottom: 0;
+}
+
+/* Dot Navigation */
+.dot-navigation {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background-color: #999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot:hover {
+  background-color: #333;
+}
+
+/* Scroll dots - unused? */
+.scroll-dots {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+.scroll-dots a {
+  width: 12px;
+  height: 12px;
+  background: #888;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.scroll-dots a:hover, .scroll-dots a:focus {
+  background: #555;
+}
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .split-content, .split-image {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .sticky-header, .sticky-footer {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .split-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .split-content p {
+    font-size: 1rem;
+  }
+
+  .scroll-dots {
+    right: 10px;
+  }
+
+  .floating-card {
+    display: none;
+  }
+}
