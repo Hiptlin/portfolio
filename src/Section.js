@@ -67,17 +67,17 @@ function Section({
           </div>
         )}
 
-        {link && !buttons && (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button"
-            aria-label="Check it out"
-          >
-            Check it out →
-          </a>
-        )}
+           {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+          style={{ marginTop: "1rem", display: "inline-block" }}
+        >
+          View Chatbot
+        </a>
+      )}
       </div>
 
       <div className={`split-image ${isProject ? "floating-card" : ""}`}>
