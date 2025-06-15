@@ -75,7 +75,7 @@ function Section({
           className="btn"
           style={{ marginTop: "1rem", display: "inline-block" }}
         >
-          View Chatbot
+          Let's go !!!
         </a>
       )}
       </div>
