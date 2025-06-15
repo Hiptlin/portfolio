@@ -31,7 +31,7 @@ const sections = [
     image: "./project2.png",
     theme: "theme-green",
     isProject: true,
-    link: "https://ai-agri-robot.com",
+    link: "https://hiptlin.github.io/agri-web/",
   },
   {
     id: "project3",
@@ -42,7 +42,7 @@ const sections = [
     image: "./project3.jpeg",
     theme: "theme-orange",
     isProject: true,
-    link: "https://paper-grading-ai.com",
+    link: "https://hiptlin.github.io/grader/",
   },
   {
     id: "project4",
@@ -53,7 +53,7 @@ const sections = [
     image: "./project4.jpeg",
     theme: "theme-purple",
     isProject: true,
-    link: "https://smart-parking.io",
+    link: "https://hiptlin.github.io/parkez/",
   },
   {
     id: "startup",
