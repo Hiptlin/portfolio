@@ -63,8 +63,7 @@ const sections = [
     tags: ["Startup", "Innovation", "AI"],
     image: "./startup.jpg",
     theme: "theme-grey",
-    link: "https://tetrax-ai-labs.com",
-  },
+    },
   {
     id: "contact",
     title: "Let's Connect 🤝",
