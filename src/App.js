@@ -20,7 +20,7 @@ const sections = [
     image: "./project1.jpeg",
     theme: "theme-blue",
     isProject: true,
-    link: " https://hiptlin.github.io/chatbot-website/",
+    link: "https://hiptlin.github.io/chatbot-website/",
   },
   {
     id: "project2",
